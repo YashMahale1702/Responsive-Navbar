@@ -1,0 +1,100 @@
+@keyframes shine {
+	to {
+		background-position: 200% center;
+	}
+}
+
+@keyframes fade-up {
+	0% {
+		opacity: 0;
+		transform: translateY(8rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes zoom {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1.0);
+	}
+}
+
+@keyframes zoom-out {
+	100% {
+		opacity: 1;
+		transform: scale(1.0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
+@keyframes fade-left {
+	0% {
+		opacity: 0;
+		transform: translateX(-5rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+@keyframes fade-right {
+	0% {
+		opacity: 0;
+		transform: translateX(5rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes fade-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-2rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+//
+@keyframes animate {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: -186px 0;
+	}
+}
+
+.animate {
+	animation: animate 5s linear infinite;
+}

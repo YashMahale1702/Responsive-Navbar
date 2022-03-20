@@ -1,0 +1,46 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+
+	@include respond(tab-land) {
+		// *1 rem : 9px  1200px
+		font-size: 56.25%;
+	}
+
+	@include respond(tab-port) {
+		// *1 rem : 8px  900px
+		font-size: 50%;
+	}
+
+	@include respond(phone) {
+		// *1 rem : 6px 600px
+		font-size: 37.5%;
+	}
+
+	@include respond(big-desktop) {
+		// *1 rem : 12px  beyond 1200
+		font-size: 75%;
+	}
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	display: grid;
+	grid-template-columns: minmax(6rem, 0.5fr) repeat(6, 1fr) minmax(6rem, 0.5fr);
+	grid-template-rows: max-content;
+	grid-auto-flow: max-content;
+	// Operator Mono A,Operator Mono B,Source Code Pro,Menlo,Consolas,Monaco,monospace;
+}
+
+.heading-1 {
+	text-align: center;
+	font-size: 8rem;
+	color: aquamarine;
+	text-transform: uppercase;
+	padding: 2rem 4rem;
+}

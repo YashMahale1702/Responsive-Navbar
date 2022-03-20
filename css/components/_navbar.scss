@@ -1,0 +1,106 @@
+.nav {
+	grid-row: 1 / 2;
+	grid-column: 2 / 8;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&-brand {
+		font-size: 3.5rem;
+		padding: 0.5rem;
+		margin: 1rem 0;
+
+		@include respond(tab-port) {
+			font-size: 2.5rem;
+		}
+	}
+
+	//Only for mobile
+	&-list-container {
+		display: none;
+		visibility: hidden;
+		opacity: 0;
+
+		@include respond(phone) {
+			position: absolute;
+			top: 5rem;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+
+			visibility: visible;
+			opacity: 1;
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: white;
+			color: black;
+			border-radius: 1.5rem;
+			margin: 2rem;
+			padding: 3rem 5rem;
+			font-size: 2rem;
+			box-shadow: 0 0.5rem 1.5rem rgba($color: #000000, $alpha: 0.1);
+			animation: zoom 0.3s ease-in;
+
+			&-items {
+				cursor: pointer;
+				padding: 2rem;
+			}
+
+			& > :not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	&-list {
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&-items {
+		font-size: 1.6rem;
+		padding: 2rem;
+		text-align: center;
+
+		@include respond(phone) {
+			display: none;
+			opacity: 0;
+		}
+	}
+
+	//Icon
+	&-icon {
+		opacity: 0;
+		display: none;
+		visibility: none;
+
+		@include respond(phone) {
+			opacity: 1;
+			display: block;
+			visibility: visible;
+			font-size: 2.4rem;
+			color: black;
+		}
+	}
+}
+
+.hidden {
+	display: none;
+	opacity: 0;
+	visibility: none;
+}
+
+.aniamte-zoom-out {
+	animation: zoom-out 0.3s ease;
+}
+.aniamte-zoom-in {
+	animation: zoom 0.3s ease;
+}
